@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-sm-4 offset-md-4">
+        <div class="card card-body">
+<form (submit)="edit ? updateCompra() :submitCompra()">
+    <div class="form-group">
+        <input type="text" name="name" [(ngModel)]="compra.producto"
+        class="form-control" placeholder="Nombre del Producto" autofocus>
+    </div>
+    <div class="form-group">
+        <input type="text" name="precio" [(ngModel)]="compra.precio"
+        class="form-control" placeholder="Precio de la Compra">
+    </div>
+    <div class="form-group">
+        <input type="text" name="fecha" [(ngModel)]="compra.fecha"
+        class="form-control" placeholder="Fecha de Compra">
+    </div>
+    <div class="form-group">
+        <input type="text" name="trabajador" [(ngModel)]="compra.trabajador"
+        class="form-control" placeholder="Trabajador que compró">
+    </div>
+    <div class="form-group">
+        <input type="text" name="factura" [(ngModel)]="compra.factura"
+        class="form-control" placeholder="Numero de Factura">
+    </div>
+    <div class="form-group">
+        <input type="text" name="ruc" [(ngModel)]="compra.ruc"
+        class="form-control" placeholder="Numero de Ruc">
+    </div>
+    <div class="form-group">
+        <input type="text" name="imageURL" [(ngModel)]="compra.imageURL"
+        class="form-control" placeholder="IMAGE URL">
+    </div>
+    <button class="btn-btn btn-primary btn-block">SAVE</button>
+</form>
+</div>
+</div>
+</div>

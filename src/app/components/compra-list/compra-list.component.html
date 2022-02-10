@@ -1,0 +1,37 @@
+<div class="flex-container">
+    <div *ngFor="let compra of compras" class="card page-wrapper">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="imgp"[src]="compra.imageURL" alt="">
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">
+                        {{compra.producto}}
+                    </span>
+                    <span class="p-description">
+                        S/{{compra.precio}}
+                    </span>
+                  </div>
+                  <div class="a-size">{{compra.trabajador}} <span class="size">
+                    {{compra.fecha}}
+                  </span></div>
+                </div>
+              </div>
+      
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+      
+                <a class="cart" href="#">
+                  <span class="price">{{compra.ruc}}</span>
+                  <span class="add-to-cart">
+                    <span class="txt" (click)="add()">{{compra.factura}}</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <button class="btn-btn btn-primary btn-block"[routerLink]="['/compra/update', compra._id]">EDIT</button>
+            <button class="btn-btn btn-primary btn-block"(click)="deleteCompra(compra._id)">DELETE</button>
+      </div>
+    </div>

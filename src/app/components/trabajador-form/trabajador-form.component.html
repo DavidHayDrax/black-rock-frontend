@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-sm-4 offset-md-4">
+        <div class="card card-body">
+<form (submit)="submitWorker()">
+    <div class="form-group">
+        <input type="text" name="nombre" [(ngModel)]="trabajador.nombre"
+        class="form-control" placeholder="Nombre del Trabajador" autofocus>
+    </div>
+    <div class="form-group">
+        <input type="text" name="apellido" [(ngModel)]="trabajador.apellido"
+        class="form-control" placeholder="Apellido del Trabajador">
+    </div>
+    <div class="form-group">
+        <input type="text" name="cargo" [(ngModel)]="trabajador.cargo"
+        class="form-control" placeholder="Cargo del Trabajador">
+    </div>
+    <div class="form-group">
+        <input type="text" name="dni" [(ngModel)]="trabajador.dni"
+        class="form-control" placeholder="Dni del Trabajador">
+    </div>
+    <div class="form-group">
+        <input type="text" name="imageURL" [(ngModel)]="trabajador.imageURL"
+        class="form-control" placeholder="Foto del Trabajador">
+    </div>
+    <button class="btn-btn btn-primary btn-block">SAVE</button>
+</form>
+</div>
+</div>
+</div>

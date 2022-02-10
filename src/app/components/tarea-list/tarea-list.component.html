@@ -1,0 +1,40 @@
+<div class="flex-container">
+    <div *ngFor="let tarea of tareas" class="card page-wrapper">
+            <div class="el-wrapper">
+              <div class="box-up">
+                  <!--
+                <img class="imgp"[src]="tarea.imageURL" alt=""> -->
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">
+                        {{tarea.name}}
+                    </span>
+                    <span class="p-description">
+                        {{tarea.description}}
+                    </span>
+                  </div>
+                  <div class="a-size">Fecha de Inicio:
+                      {{tarea.fechaDeInicio}} <br>
+                      Fecha de Fin:
+                      {{tarea.fechaDeTermino}} 
+                      <span class="size">
+                  </span></div>
+                </div>
+              </div>
+      
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+      
+                <a class="cart" href="#">
+                  <span class="price">TAREA POR REALIZAR</span>
+                  <span class="add-to-cart">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <button class="btn-btn btn-primary btn-block" [routerLink]="['/tarea/edit',tarea._id]">EDIT</button>
+            <button class="btn-btn btn-primary btn-block"(click)="deleteTarea(tarea._id)">DELETE</button>
+      </div>
+    </div>

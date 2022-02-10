@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --secondary-color: #151226;
+    --contrast-color: #BF307F;
+  }
+  .overlay {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    right: 0%;
+    bottom: 0;
+    height: 50%;
+    z-index: -10;
+    background-color: #2e519b;
+    opacity: 30%;
+    animation: expand 2s ease forwards;
+  }
+
+  .overlay2 {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    right: 25%;
+    bottom: 0;
+    height: 20%;
+    z-index: -10;
+    background-color: black;
+    opacity: 80%;
+    animation: expand 2s ease forwards;
+  }
+
+  .overlay3 {
+    position: absolute;
+    top: 120%;
+    left: 45%;
+    right: 0%;
+    bottom: 0;
+    height: 75%;
+    width: 55%;
+    z-index: -10;
+    background-color: #2e519b;
+    opacity: 30%;
+    animation: expand 2s ease forwards;
+  }
+  
+  .container {
+    position: absolute;
+    left: 10%;
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    animation: expand .8s ease forwards;
+    background-color: var(--secondary-color);
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all .8s ease;
+  }
+  
+  .container_content {
+   width: 50%;
+  }
+  
+  .container_content_inner {
+    width: 80%;
+    margin-left: 80px;
+  }
+  
+  .container_outer_img {
+    margin: 50px;
+    width: 50%;
+    overflow: hidden;
+  }   
+      
+  .container_img {
+    position: relative;
+    left: 8%;
+    top: -15%;
+    width: 45%;
+    animation: slideIn 1.5s ease-in-out forwards;
+  }
+  
+  .par {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    right: 50%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  p{
+    line-height: 28px;
+    transform: translateY(300px);
+    animation: slideUp .8s ease-in-out forwards .8s;
+  }
+  
+  .btns {
+    position: absolute;
+    left: 20%;
+    bottom: 25%;
+    width: 150px;
+    overflow: hidden;
+  }
+  
+  .btns_more {
+    background: transparent;
+    border: 1px solid var(--contrast-color);
+    border-radius: 50px;
+    padding: 8px 12px;
+    color: #BF307F;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 15px;
+    outline: none;
+    transform: translateY(50px);
+    animation: slideUp .8s ease-in-out  forwards 1s;
+  }
+  
+  .title {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 6%;
+    left: 10%;
+    overflow: hidden;
+    height: auto;
+    font-family: 'Pirata One';
+  }
+
+  .title2 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 100%;
+    left: 65%;
+    overflow: hidden;
+    height: auto;
+    font-family: 'Pirata One';
+    font-weight: 600;
+  }
+  
+  h1 {
+      font-size: 40px;
+      color: var(--contrast-color);
+      margin-bottom: 20px;
+      transform: translateY(100px);
+      animation: slideUp .8s ease forwards .5s;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 1350px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+    font-family: 'Pirata One';
+    opacity: 50%;
+  }
+
+  .img2{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+  }
+  
+  .yt{
+    position: absolute;
+    top: 125%;
+    left: 50%;
+  }
