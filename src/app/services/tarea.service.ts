@@ -8,22 +8,22 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TareaService {
-  BASE_URL: string = 'http://localhost:3002';
+  BASE_URL: string = 'http://localhost:3003';
 
   constructor(private http: HttpClient) { }
   getTareas(): Observable<Tarea[]>{
-    return this.http.get<Tarea[]>('http://localhost:3002/tarea');
+    return this.http.get<Tarea[]>('http://localhost:3003/tarea');
   }
   createTarea(tarea: Tarea): Observable<Tarea>{
-    return this.http.post<Tarea>('http://localhost:3002/tarea/create',tarea);
+    return this.http.post<Tarea>('http://localhost:3003/tarea/create',tarea);
   }
   deleteTarea(id: string): Observable<Tarea>{
-      return this.http.delete<Tarea>(`http://localhost:3002/tarea/delete?tareaID=${id}`);
+      return this.http.delete<Tarea>(`http://localhost:3003/tarea/delete?tareaID=${id}`);
   }
   updateTarea(id: any, tarea: Tarea): Observable<Tarea>{
-    return this.http.put<Tarea>(`http://localhost:3002/tarea/update?tareaID=${id}`, tarea);
+    return this.http.put<Tarea>(`http://localhost:3003/tarea/update?tareaID=${id}`, tarea);
   }
   getTarea(id: string): Observable<Tarea>{
-    return this.http.get<Tarea>(`http://localhost:3002/tarea/${id}`);
+    return this.http.get<Tarea>(`http://localhost:3003/tarea/${id}`);
   }
 }
